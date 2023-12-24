@@ -1,0 +1,118 @@
+:root{
+    --background-color-aside: #e8e8e8;
+    --background-color-box-aside: #c7c7c7;
+
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+body{
+    max-width: 1400px;
+    margin: 10px auto;
+}
+
+#container{
+    box-shadow: 5px 5px 20px 3px gray;
+    width: 100%;
+    height: 100vh;
+    overflow-y: scroll;
+    display: grid;
+    grid-template-columns: 25% 75%;
+}
+/*----- Header -----*/
+#aside{
+    grid-column: 1/2;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items: flex-start;
+    row-gap: 20px;
+    width: 100%;
+    padding: 30px;
+    background-color:var(--background-color-aside);
+
+}
+#logo{
+    width: 80px;
+}
+
+#search{
+    width: 100%;
+    font-size: 1.1rem;
+    background-color: var(--background-color-box-aside);
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    padding: 5px;
+}
+
+.boxes-status{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    row-gap: 10px;
+    justify-content: space-between;
+}
+
+.box-status{
+    width:48%;
+    background-color:var(--background-color-box-aside) ;
+    border-radius: 8px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.box-status div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.box-status img{
+    width: 15px;
+}
+
+#todo-list-section{
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    row-gap: 10px;
+    cursor: pointer;
+}
+
+#todo-list-section p{
+    width: fit-content;
+}
+
+
+#todo-list-section img{
+    width: 15px;
+    margin-right: 7px;
+}
+
+#todo-list-section ul{
+    padding:5px 10px;
+    width: fit-content;
+}
+
+#todo-list-section li{
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+    width: fit-content;
+}
+
+#family-stuff ul{
+    display: none;
+}
+
+
+

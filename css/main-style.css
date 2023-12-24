@@ -1,0 +1,13 @@
+#main{
+    grid-column: 2/3;
+}
+
+#nav-bar{
+    position: relative;
+}
+#nav-bar img{
+    position: absolute;
+    width: 20px;
+    top: 30px;
+    right: 30px;
+}

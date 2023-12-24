@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Todo App">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="mahbubeh shubi">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/main-style.css">
+    <link rel="icon" href="image/icon.png">
+    <title>Todo App</title>
+</head>
+<body>
+
+<div id="container">
+    <div id="aside">
+        <img id="logo" src="image/Logo.png">
+        <input type="search" placeholder="Search" id="search">
+
+        <div class="boxes-status">
+            <div class="box-status">
+                <div>
+                    <img src="./image/icons/calendar.svg">
+                    <span class="filter" data-filter="today">Today</span>
+                </div>
+                <span class="counter">0</span>
+            </div>
+
+            <div class="box-status">
+                <div>
+                    <img src="./image/icons/clock-time.svg">
+                    <span class="filter" data-filter="scheduled">Scheduled</span>
+                </div>
+                <span class="counter">0</span>
+            </div>
+
+            <div class="box-status">
+                <div>
+                    <img src="./image/icons/archive.svg">
+                    <span class="filter" data-filter="all">All</span>
+                </div>
+                <span class="counter">0</span>
+            </div>
+
+            <div class="box-status">
+                <div>
+                    <img src="./image/icons/flag.svg">
+                    <span class="filter" data-filter="flagged">Flagged</span>
+                </div>
+                <span class="counter">0</span>
+            </div>
+        </div>
+
+        <div id="todo-list-section">
+            <p><img src="image/icons/listine-dots.svg" class="filter" data-filter="all">To Do</p>
+            <p><img src="image/icons/pending.svg" class="filter" data-filter="pending">Pending</p>
+            <p><img src="image/icons/complete.svg" class="filter" data-filter="completed">Completed</p>
+            <ul>
+                <li id="family-stuff">Family Stuff
+                    <ul>
+                        <li><img src="image/icons/shopping.svg">Shopping</li>
+                        <li><img src="image/icons/family.svg">Family</li>
+                        <li><img src="image/icons/home.svg">Spring Cleaning</li>
+                    </ul>
+                </li>
+            </ul>
+            
+            <p id="add-todo"><img src="image/icons/add-todo.svg">Add List</p>
+        </div>
+
+    </div>
+
+    <main id="main">
+        <div id="nav-bar">
+            <img src="image/icons/chang-background-2.svg" alt="menu">
+        </div>
+        <div id="box-backgroung-img">
+
+        </div>
+
+
+    </main>
+</div>
+
+
+
+
+<script src="js/app.js"></script>
+</body>
+</html>
