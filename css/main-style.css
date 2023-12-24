@@ -1,5 +1,6 @@
 #main{
     grid-column: 2/3;
+    overflow-y: scroll;
 }
 
 #nav-bar{
@@ -10,4 +11,63 @@
     width: 20px;
     top: 30px;
     right: 30px;
+}
+
+#add-task-todo{
+    /*display: none;*/
+    padding: 100px 50px 30px;
+    border-bottom: 3px solid black;
+}
+
+#add-task-todo div:nth-child(1){
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+#add-task-todo div{
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    justify-content: space-between;
+}
+#add-task-todo div input , #add-task-todo div select {
+    width: 48%;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+#add-task-todo textarea{
+    height: 100px;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+#add-task-todo button{
+    background-color: green;
+    color: white;
+    padding: 5px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+}
+
+/*------------- Loading -------*/
+
+#loading{
+    display: flex;
+    flex-direction: column;
+    padding:50px ;
+}
+
+.box{
+    display: flex;
+    column-gap: 10px;
+    align-items:baseline;
+    border-bottom: 1px solid gray;
+    margin-top: 15px;
+}
+
+.box div p{
+   margin: 10px 0;
 }
