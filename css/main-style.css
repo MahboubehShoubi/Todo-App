@@ -1,8 +1,11 @@
 #main{
     grid-column: 2/3;
     overflow-y: scroll;
+    position: relative;
+    /*filter: blur(1px);*/
 }
 
+/*------------ background Image---------*/
 #nav-bar{
     position: relative;
 }
@@ -12,6 +15,33 @@
     top: 30px;
     right: 30px;
 }
+
+#box-background{
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    z-index: 10;
+    background-color: white;
+}
+#box-background-img{
+
+    width: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 20px;
+    box-shadow: 5px 8px 25px 1px #d5d5d5 , -5px -8px 25px 1px #d5d5d5;
+    padding: 10px 30px;
+}
+
+#box-background-img img{
+    width: 100px;
+    height: 100px;
+
+}
+
+
 
 #add-task-todo{
     padding: 100px 50px 30px;
@@ -52,6 +82,10 @@
     display: none;
 }
 
+.favourite-icons{
+    width: 15px;
+}
+
 /*------------- Loading -------*/
 
 #loading{
@@ -76,7 +110,7 @@
     background-color: inherit;
 }
 
-.control-box{
+.control-box , .img-control {
     width: 35%;
     height: inherit;
 }
@@ -110,23 +144,29 @@
     border: 1px solid #f31010;
 }
 
-.todo-boxes .control-box img{
+.todo-boxes .img-control{
     display: none;
 }
 
-.todo-boxes-complete .control-box{
+
+.todo-boxes-complete .img-control{
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
+    column-gap: 20px;
     align-items: center;
 }
-.todo-boxes-complete .control-box img{
+.todo-boxes-complete .img-control img{
     display: block;
     width: 40px;
 }
-.todo-boxes-complete .control-box button{
+
+.todo-boxes-complete .control-box{
     display: none;
 }
 
+#delete-todo-complete{
+    cursor: pointer;
+}
 
 .info-todo h3{
     font-size: 1.5rem;
