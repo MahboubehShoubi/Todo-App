@@ -24,7 +24,7 @@
                     <img src="./image/icons/calendar.svg">
                     <span class="filter" data-filter="today">Today</span>
                 </div>
-                <span class="counter">0</span>
+                <span class="today-counter"></span>
             </div>
 
             <div class="box-status">
@@ -40,7 +40,7 @@
                     <img src="./image/icons/archive.svg">
                     <span class="filter" data-filter="all">All</span>
                 </div>
-                <span class="counter">0</span>
+                <span class="all-counter"></span>
             </div>
 
             <div class="box-status">
@@ -83,39 +83,28 @@
             <div class="alert-massage"></div>
 
             <div id="add-task-todo">
-                <div>
-                    <h2>Add task:</h2>
-                    <div>
-                        <select id="select-status">
-                            <option value="">Select status</option>
-                            <option value="family">Family</option>
-                            <option value="work">Work</option>
-                            <option value="educational">Educational</option>
-                        </select>
-                        <input id="subject-todo" type="text" placeholder="Subject">
-                        <input type="date" id="date-todo">
-                        <input type="time" id="time-todo">
-                    </div>
-                    <textarea placeholder="Task" id="text-task-todo"></textarea>
-                    <button id="add-button">Add</button>
+                <h2>Add task:</h2>
+                <div class="flagged-box-header">
+                    <label>Important: </label>
+                    <input type="checkbox" name="flag" id="flagged">
                 </div>
-
+                <div class="section-task-inputs">
+                    <select id="select-status">
+                        <option value="">Select status</option>
+                        <option value="Family">Family</option>
+                        <option value="Work">Work</option>
+                        <option value="Educational">Educational</option>
+                    </select>
+                    <input id="subject-todo" type="text" placeholder="Subject">
+                    <input type="date" id="date-todo">
+                    <input type="time" id="time-todo">
+                </div>
+                <textarea placeholder="Task" id="text-task-todo"></textarea>
+                <button id="add-button">Add</button>
+                <button id="edit-button">Edit</button>
             </div>
 
-            <div id="loading">
-<!--                <div class="todo-box">-->
-<!--                    <h3>day</h3>-->
-<!--                    <div class="box">-->
-<!--                        <input type="radio" name="complete">-->
-<!--                        <div>-->
-<!--                            <span>subject | </span>-->
-<!--                            <span>day | </span>-->
-<!--                            <span>time</span>-->
-<!--                            <p>task</p>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-            </div>
+            <div id="loading"></div>
         </div>
 
 

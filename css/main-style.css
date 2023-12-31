@@ -14,25 +14,21 @@
 }
 
 #add-task-todo{
-    /*display: none;*/
     padding: 100px 50px 30px;
     border-bottom: 3px solid black;
-}
-
-#add-task-todo div:nth-child(1){
     width: 100%;
     display: flex;
     flex-direction: column;
     row-gap: 20px;
 }
 
-#add-task-todo div{
+.section-task-inputs{
     display: flex;
     flex-wrap: wrap;
-    row-gap: 10px;
+    row-gap: 12px;
     justify-content: space-between;
 }
-#add-task-todo div input , #add-task-todo div select {
+.section-task-inputs input , .section-task-inputs select {
     width: 48%;
     border-radius: 5px;
     padding: 5px 10px;
@@ -52,6 +48,10 @@
     border-radius: 5px;
 }
 
+#edit-button{
+    display: none;
+}
+
 /*------------- Loading -------*/
 
 #loading{
@@ -60,14 +60,96 @@
     padding:50px ;
 }
 
-.box{
+.todo-boxes-complete{
     display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid black;
+    padding: 10px 0;
+    filter: opacity(50%);
+}
+
+.todo-boxes{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid black;
+    padding: 10px 0;
+    background-color: inherit;
+}
+
+.control-box{
+    width: 35%;
+    height: inherit;
+}
+
+.todo-boxes .control-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.todo-boxes .control-box button{
+    display: block;
+    width: 30%;
+    padding: 5px 20px;
+    color: white;
+    border-radius: 5px;
+}
+
+.edit-btn{
+    background-color: orange;
+    border: 1px solid orange;
+}
+
+.complete-btn{
+    background-color: green;
+    border: 1px solid green;
+}
+
+.delete-todo-btn{
+    background-color: #f31010;
+    border: 1px solid #f31010;
+}
+
+.todo-boxes .control-box img{
+    display: none;
+}
+
+.todo-boxes-complete .control-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.todo-boxes-complete .control-box img{
+    display: block;
+    width: 40px;
+}
+.todo-boxes-complete .control-box button{
+    display: none;
+}
+
+
+.info-todo h3{
+    font-size: 1.5rem;
+}
+
+.box{
     column-gap: 10px;
     align-items:baseline;
-    border-bottom: 1px solid gray;
     margin-top: 15px;
 }
 
-.box div p{
-   margin: 10px 0;
+.box p{
+    margin: 10px 0;
+    width: 100%;
+    font-weight: 700;
+    font-size: 1.1rem;
 }
+
+.box span{
+    font-weight: normal;
+}
+
+.box p:nth-child(2){
+    font-weight: 500;
+}
+
