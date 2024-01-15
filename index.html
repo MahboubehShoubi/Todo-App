@@ -8,6 +8,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/main-style.css">
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <link rel="icon" href="image/icon.png">
     <title>Todo App</title>
 </head>
@@ -16,10 +20,9 @@
 <div id="container">
     <div id="aside">
         <img id="logo" src="image/Logo.png">
-        <input type="search" placeholder="Search" id="search">
 
         <div class="boxes-status">
-            <div class="box-status">
+            <div class="box-status filter" data-filter="today">
                 <div>
                     <img src="./image/icons/calendar.svg">
                     <span>Today</span>
@@ -27,64 +30,69 @@
                 <span class="today-counter"></span>
             </div>
 
-            <div class="box-status">
+            <div class="box-status filter" data-filter="all">
                 <div>
-                    <img src="./image/icons/clock-time.svg">
-                    <span >Scheduled</span>
-                </div>
-                <span class="counter">0</span>
-            </div>
-
-            <div class="box-status">
-                <div>
-                    <img src="./image/icons/archive.svg">
+                    <img src="./image/icons/listine-dots.svg">
                     <span >All</span>
                 </div>
                 <span class="all-counter"></span>
             </div>
 
-            <div class="box-status">
-                <div>
-                    <img src="./image/icons/flag.svg">
-                    <span >Flagged</span>
-                </div>
-                <span class="flagged-counter">0</span>
-            </div>
         </div>
 
         <div id="todo-list-section">
-            <p class="filter" data-filter="all"><img src="image/icons/listine-dots.svg">To Do</p>
-            <p class="filter" data-filter="pending"><img src="image/icons/pending.svg">Pending</p>
-            <p class="filter" data-filter="completed"><img src="image/icons/complete.svg">Completed</p>
-            <ul>
-                <li id="family-stuff">Family Stuff
-                    <ul>
-                        <li><img src="image/icons/family.svg">Family</li>
-                        <li><img src="image/icons/shopping.svg">Work</li>
-                        <li><img src="image/icons/home.svg">Educational</li>
-                    </ul>
-                </li>
-            </ul>
-            
-            <p id="add-todo"><img src="image/icons/add-todo.svg">Add List</p>
+            <div class="box-filter">
+                <p class="filter" data-filter="pending"><img src="image/icons/pending.svg">Pending</p>
+                <span class="pending-counter"></span>
+            </div>
+            <div class="box-filter">
+                <p class="filter" data-filter="completed"><img src="image/icons/complete-1.svg">Completed</p>
+                <span class="completed-counter"></span>
+            </div>
+            <div class="box-filter">
+                <p class="filter" data-filter="flagged"><img src="image/icons/flag.svg">Flagged</p>
+                <span class="flagged-counter"></span>
+            </div>
+            <div class="box-filter">
+                <p class="filter" data-filter="family"><img src="image/icons/family.svg">Family</p>
+                <span class="family-counter"></span>
+            </div>
+            <div class="box-filter">
+                <p class="filter" data-filter="work"><img src="image/icons/architecture-alt.svg">Work</p>
+                <span class="work-counter"></span>
+            </div>
+            <div class="box-filter">
+                <p class="filter" data-filter="educational"><img src="image/icons/education-1.svg">Educational</p>
+                <span class="educational-counter"></span>
+            </div>
+
         </div>
 
     </div>
 
     <main id="main">
+        <img id="add-todo" src="image/icons/ui-add.svg" alt="add">
         <div id="nav-bar">
             <img id="nav-bar-icon" src="image/icons/chang-background-2.svg" alt="menu">
         </div>
-        <div id="box-background">
+
+        <div id="box-background" class="box-background">
             <div id="box-background-img">
+                <img class="bg-img" src="image/background/14.jpg">
                 <img class="bg-img" src="image/background/1.jpg">
-                <img class="bg-img" src="image/background/2.jpeg">
+                <img class="bg-img" src="image/background/2.png">
                 <img class="bg-img" src="image/background/3.jpg">
                 <img class="bg-img" src="image/background/4.jpg">
-                <img class="bg-img" src="image/background/5.jpeg">
+                <img class="bg-img" src="image/background/5.png">
                 <img class="bg-img" src="image/background/6.jpg">
-                <img class="bg-img" src="image/background/7.jpeg">
-                <img class="bg-img" src="image/background/8.jpg">
+                <img class="bg-img" src="image/background/7.jpg">
+                <img class="bg-img" src="image/background/8.jpeg">
+                <img class="bg-img" src="image/background/9.jpeg">
+                <img class="bg-img" src="image/background/10.jpeg">
+                <img class="bg-img" src="image/background/11.jpeg">
+                <img class="bg-img" src="image/background/12.jpeg">
+                <img class="bg-img" src="image/background/13.jpeg">
+
             </div>
         </div>
 
@@ -92,29 +100,47 @@
         <div id="main-page">
             <div class="alert-massage"></div>
 
-            <div id="add-task-todo">
-                <h2>Add task:</h2>
-                <div class="flagged-box-header">
-                    <label>Important: </label>
-                    <input type="checkbox" name="flag" id="flagged">
+            <div class="box-task">
+                <div id="add-task-todo">
+                    <h2 id="title-todo"></h2>
+                    <div class="flagged-box-header">
+                        <label>Important: </label>
+                        <input type="checkbox" name="flag" id="flagged">
+                    </div>
+                    <div class="section-task-inputs">
+                        <select id="select-status">
+                            <option value="">Select status</option>
+                            <option value="Family">Family</option>
+                            <option value="Work">Work</option>
+                            <option value="Educational">Educational</option>
+                        </select>
+                        <input id="subject-todo" type="text" placeholder="Subject">
+                        <input type="date" id="date-todo">
+                        <input type="time" id="time-todo">
+                    </div>
+                    <textarea placeholder="Task" id="text-task-todo"></textarea>
+                    <div class="buttons-handler">
+                        <button id="add-button">Add</button>
+                        <button id="cancel-add">Cancel</button>
+                        <button id="edit-button">Edit</button>
+                        <button id="cancel-edit">Cancel</button>
+                    </div>
+
                 </div>
-                <div class="section-task-inputs">
-                    <select id="select-status">
-                        <option value="">Select status</option>
-                        <option value="Family">Family</option>
-                        <option value="Work">Work</option>
-                        <option value="Educational">Educational</option>
-                    </select>
-                    <input id="subject-todo" type="text" placeholder="Subject">
-                    <input type="date" id="date-todo">
-                    <input type="time" id="time-todo">
-                </div>
-                <textarea placeholder="Task" id="text-task-todo"></textarea>
-                <button id="add-button">Add</button>
-                <button id="edit-button">Edit</button>
             </div>
 
-            <div id="loading"></div>
+
+            <div class="box-loading-header">
+                <h1 class="loading-header"></h1>
+            </div>
+            <div class="box-loading">
+                <div id="loading"></div>
+            </div>
+
+            <div class="box-loading-completed">
+                <div id="loading-completed"></div>
+            </div>
+
         </div>
 
 

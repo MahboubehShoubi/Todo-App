@@ -35,7 +35,6 @@ body{
     width: 100%;
     padding: 30px;
     background-color:var(--background-color-aside);
-
 }
 #logo{
     width: 80px;
@@ -53,9 +52,7 @@ body{
 
 .boxes-status{
     display: flex;
-    flex-wrap: wrap;
     width: 100%;
-    row-gap: 10px;
     justify-content: space-between;
 }
 
@@ -66,6 +63,7 @@ body{
     padding: 10px;
     display: flex;
     justify-content: space-between;
+    cursor: pointer;
 }
 
 .box-status div{
@@ -79,22 +77,29 @@ body{
 }
 
 #todo-list-section{
-    width: fit-content;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     row-gap: 10px;
-    cursor: pointer;
+}
+
+.box-filter{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
 }
 
 #todo-list-section p{
     width: fit-content;
+    cursor: pointer;
 }
 
 
 #todo-list-section img{
-    width: 15px;
+    width: 20px;
     margin-right: 7px;
 }
 
@@ -103,14 +108,55 @@ body{
     width: fit-content;
 }
 
-#todo-list-section li{
+.list-item{
+    display: flex;
+    justify-content: space-between;
     font-size: 1.1rem;
     line-height: 1.5rem;
-    width: fit-content;
+    width: 100%;
 }
 
-#family-stuff ul{
-    /*display: none;*/
+/*--------- media max-width:480px ------*/
+
+@media only screen and (max-width: 576px) {
+    #container{
+        display: flex;
+        flex-direction: column;
+    }
+    /*----- Header -----*/
+    #aside{
+        row-gap: 10px;
+        padding: 30px 20px 10px;
+    }
+    #logo{
+        width: 50px;
+    }
+
+    .box-status img{
+        width: 12px;
+    }
+
+    #todo-list-section{
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .box-filter{
+        width: 40%;
+    }
+
+    #todo-list-section p{
+        width: fit-content;
+        cursor: pointer;
+    }
+
+
+    #todo-list-section img{
+        width: 12px;
+    }
+
 }
 
 

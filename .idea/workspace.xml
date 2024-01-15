@@ -4,7 +4,28 @@
     <list default="true" id="3f34aed2-d6d1-4bd2-ad33-e2e7bbe1d4b5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/main-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/main-style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/icons/favourite.svg" beforeDir="false" afterPath="$PROJECT_DIR$/image/icons/favourite.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/background/2.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/background/3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/image/background/3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/background/4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/image/background/4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/background/5.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/background/6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/image/background/6.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/background/7.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/background/8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/icons/archive.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/icons/chang-background-1.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/icons/check-circled.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/icons/check.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/icons/complete.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/icons/favourite.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/icons/home.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/icons/minus-circle.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/icons/minus-square.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/icons/plus-circle.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/icons/plus-square.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/icons/tick-boxed.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/icons/ui-check.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/icons/users-social.svg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/app.js" afterDir="false" />
     </list>
@@ -60,6 +81,26 @@
       <workItem from="1703934138812" duration="6486000" />
       <workItem from="1703998022588" duration="11778000" />
       <workItem from="1704041385703" duration="2042000" />
+      <workItem from="1704047771461" duration="635000" />
+      <workItem from="1704089269991" duration="2428000" />
+      <workItem from="1704173570008" duration="8109000" />
+      <workItem from="1704200079584" duration="5279000" />
+      <workItem from="1704260058043" duration="10182000" />
+      <workItem from="1704350912684" duration="3202000" />
+      <workItem from="1704395582867" duration="10116000" />
+      <workItem from="1704526593552" duration="254000" />
+      <workItem from="1704534290650" duration="8599000" />
+      <workItem from="1704633252909" duration="3636000" />
+      <workItem from="1704637641319" duration="120000" />
+      <workItem from="1704774981868" duration="583000" />
+      <workItem from="1704775710007" duration="97000" />
+      <workItem from="1704775897792" duration="11972000" />
+      <workItem from="1704861926089" duration="11236000" />
+      <workItem from="1704876352172" duration="59000" />
+      <workItem from="1705209299321" duration="11265000" />
+      <workItem from="1705295467756" duration="12257000" />
+      <workItem from="1705315205582" duration="6471000" />
+      <workItem from="1705321745133" duration="11627000" />
     </task>
     <servers />
   </component>
