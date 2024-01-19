@@ -4,28 +4,6 @@
     <list default="true" id="3f34aed2-d6d1-4bd2-ad33-e2e7bbe1d4b5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/main-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/main-style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/background/2.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/background/3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/image/background/3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/background/4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/image/background/4.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/background/5.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/background/6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/image/background/6.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/background/7.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/background/8.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/icons/archive.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/icons/chang-background-1.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/icons/check-circled.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/icons/check.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/icons/complete.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/icons/favourite.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/icons/home.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/icons/minus-circle.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/icons/minus-square.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/icons/plus-circle.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/icons/plus-square.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/icons/tick-boxed.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/icons/ui-check.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/icons/users-social.svg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/app.js" afterDir="false" />
     </list>
@@ -101,6 +79,11 @@
       <workItem from="1705295467756" duration="12257000" />
       <workItem from="1705315205582" duration="6471000" />
       <workItem from="1705321745133" duration="11627000" />
+      <workItem from="1705348531199" duration="3199000" />
+      <workItem from="1705468483833" duration="9728000" />
+      <workItem from="1705485742029" duration="3478000" />
+      <workItem from="1705659610158" duration="3095000" />
+      <workItem from="1705677810340" duration="1969000" />
     </task>
     <servers />
   </component>

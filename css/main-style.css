@@ -42,13 +42,26 @@
 }
 .box-background2{
     display: block;
-    position: relative;
+    position: absolute;
     z-index: 10;
     width:100%;
     height: 100%;
-    background: rgba(168, 168, 168, 0.78);
+    background: rgba(201, 201, 201, 0.47);
 }
-#box-background-img{
+.parent-box-background{
+    display: none;
+}
+.parent-box-background2{
+    display: block;
+    animation: showBoxImages 500ms;
+}
+
+.parent-box-background3{
+    display: block;
+    animation: exitBoxImages 800ms;
+}
+
+.box-background-img{
     background-color: white;
     position: absolute;
     z-index: 11;
@@ -62,11 +75,33 @@
     padding: 10px 30px;
 }
 
-#box-background-img img{
+@keyframes showBoxImages {
+    0%{
+        transition: ease;
+        transform: translateX(400px);
+    }
+    100%{
+        transition: ease;
+        transform: translateX(0);
+    }
+}
+
+@keyframes exitBoxImages {
+    0%{
+        transition: ease;
+        transform: translateX(0px);
+    }
+    100%{
+        transition: ease;
+        transform: translateX(500px);
+    }
+}
+.box-background-img img{
     width: 100px;
     height: 100px;
     background-color: white;
     cursor: pointer;
+    border: 1px solid black;
 }
 
 .box-task{
@@ -123,10 +158,12 @@
 
 #add-button , #edit-button{
     background-color: green;
+    border: 1px solid green;
 }
 
 #cancel-edit , #cancel-add{
     background-color: orange;
+    border: 1px solid orange;
 }
 
 .favourite-icons{
@@ -198,6 +235,7 @@
     background-color: orange;
     border: 1px solid orange;
     cursor: pointer;
+    scroll-behavior: smooth;
 }
 
 .complete-btn{

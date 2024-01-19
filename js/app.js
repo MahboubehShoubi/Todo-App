@@ -14,6 +14,8 @@ const tittleTodo = document.getElementById("title-todo");
 const navIcon = document.getElementById("nav-bar-icon");
 const imaBackgroundList = document.querySelectorAll(".bg-img");
 const boxBackground = document.getElementById("box-background");
+const boxBackgroundImage = document.querySelector(".box-background-img");
+const parentBoxBackground = document.querySelector(".parent-box-background");
 
 let loading = document.getElementById("loading");
 const loadingHeader = document.querySelector(".loading-header");
@@ -73,6 +75,17 @@ const generatedId = () => {
 //show Background Handler ------------------------------------------
 const showBackgroundHandler = () => {
     boxBackground.classList.toggle("box-background2");
+    if (parentBoxBackground.classList.item(1) !== "parent-box-background2"){
+        boxBackgroundImage.style.display="block";
+        parentBoxBackground.classList.remove("parent-box-background3");
+        parentBoxBackground.classList.add("parent-box-background2");
+    } else if (parentBoxBackground.classList.item(1) === "parent-box-background2") {
+        parentBoxBackground.classList.remove("parent-box-background2");
+        parentBoxBackground.classList.add("parent-box-background3");
+        setTimeout(() => {
+            boxBackgroundImage.style.display="none";
+        }, 450);
+    }
 }
 
 //setImageBackground-----------------------------------------------
@@ -141,20 +154,26 @@ const editedHandler = (id) => {
 const editTodoList = (event) => {
     const idTodo = event.target.dataset.id;
     const findTodoList = todos.find(todo => todo.id === idTodo);
+
     let filterName = JSON.parse(localStorage.getItem("filter"));
     let findTodo = todos.find(todo => todo.id === idTodo).complete;
+
     findTodoList.flag=flaggedCheckedBox.checked;
     findTodoList.mode = modeTodo.value;
     findTodoList.subject = subjectTodo.value;
     findTodoList.day = dateTodo.value;
     findTodoList.time = timeTodo.value;
     findTodoList.task = textTaskTodo.value;
+
+    let newListEdit = todos.filter(todo => todo.id !== idTodo);
+    console.log(newListEdit);
+    todos = newListEdit;
+    todos.unshift(findTodoList);
+    firstLoading();
+
     saveLocalstorage();
     showDisplayWithFilter(filterName , findTodo);
     displayTodo();
-    firstLoading();
-    // editButton.style.display="none";
-    // addButton.style.display="block";
     boxTask.classList.remove("box-task2");
 
     modeTodo.value = "";
@@ -193,6 +212,7 @@ const deleteTodo = (id) => {
     let filterName = JSON.parse(localStorage.getItem("filter"));
     let findCompleted = todos.find(todo => todo.id === id).complete;
     const findMode = todos.find(todo => todo.id === id).mode;
+
     let newTodos = todos.filter(todo => todo.id !== id);
     todos = newTodos;
     if(findCompleted === false){
@@ -239,7 +259,7 @@ const displayTodo = () => {
                  </div>
                  
                  <div class="control-box">
-                   <button class="edit-btn" onclick="editedHandler('${todo.id}')" >Edit</button>
+                   <button href="#add-task-todo" class="edit-btn" onclick="editedHandler('${todo.id}')" >Edit</button>
                    <button class="complete-btn" onclick="changeComplete('${todo.id}')">Complete</button>  
                    <button class="delete-todo-btn" onclick="deleteTodo('${todo.id}')">Delete</button>
                  </div>     
@@ -391,7 +411,6 @@ const showDisplayWithFilter = (filterName , findTodo , findMode) => {
 const firstLoading = () => {
     mainSection.style.backgroundImage=`url(${JSON.parse(localStorage.getItem("imgSrc"))})`;
 
-
     pendingArray =todos.filter(todo => todo.complete === false) || [];
     completedArray =todos.filter(todo => todo.complete === true) || [];
     todayArray =todos.filter(todo => todo.day === date) || [];
@@ -438,6 +457,13 @@ imaBackgroundList.forEach(img => {
 
 boxBackground.addEventListener("click" , () => {
     boxBackground.classList.remove("box-background2");
+    if(parentBoxBackground.classList.item(1) === "parent-box-background2") {
+        parentBoxBackground.classList.remove("parent-box-background2");
+        parentBoxBackground.classList.add("parent-box-background3");
+        setTimeout(() => {
+            boxBackgroundImage.style.display="none";
+        }, 450);
+    }
 })
 
 addTodo.addEventListener("click" , () => {
@@ -449,4 +475,8 @@ addTodo.addEventListener("click" , () => {
     timeTodo.value="";
     textTaskTodo.value="";
     flaggedCheckedBox.checked=false;
+
+    saveLocalstorageLastTodo(allArray);
+    displayTodo();
+    loadingHeader.innerText="All Todo :";
 })
