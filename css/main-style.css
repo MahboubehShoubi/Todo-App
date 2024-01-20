@@ -67,12 +67,12 @@
     z-index: 11;
     top: 60px;
     right: 50px;
-    width: 400px;
+    width: 330px;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
     gap: 20px;
-    padding: 10px 30px;
+    padding: 10px;
 }
 
 @keyframes showBoxImages {
@@ -170,6 +170,10 @@
     width: 22px;
 }
 
+#date-todo , #time-todo{
+    cursor: pointer;
+}
+
 /*------------- Loading -------*/
 .alert-msg{
     font-size: 1.5rem;
@@ -210,6 +214,10 @@
     border-bottom: 2px solid black;
     padding: 10px 0;
     background-color: inherit;
+}
+
+.info-todo{
+    width: 60%;
 }
 
 .control-box , .img-control {
@@ -301,23 +309,53 @@
         width: 20px;
     }
 
-    .box-background2{
-        display: block;
-        position: relative;
-        z-index: 10;
-        width:100%;
-        height: 100vh;
-        background: rgba(211, 211, 211, 0.26);
+    .parent-box-background{
+        display: none;
     }
-    #box-background-img{
-        width: 230px;
+    .parent-box-background2{
+        display: block;
+        animation: showBoxImages 500ms;
+    }
+
+    .parent-box-background3{
+        display: block;
+        animation: exitBoxImages 800ms;
+    }
+
+    @keyframes showBoxImages {
+        0%{
+            transition: ease;
+            transform: translateX(180px);
+        }
+        100%{
+            transition: ease;
+            transform: translateX(0px);
+        }
+    }
+
+    @keyframes exitBoxImages {
+        0%{
+            transition: ease;
+            transform: translateX(0px);
+        }
+        100%{
+            transition: ease;
+            transform: translateX(180px);
+        }
+    }
+
+    .box-background-img{
+        width: 120px;
         display: flex;
         flex-wrap: wrap;
         justify-content: flex-start;
         gap: 10px;
+        top: 50px;
+        right: 30px;
+        padding: 8px;
     }
 
-    #box-background-img img{
+    .box-background-img img{
         width:50px;
         height: 50px;
         background-color: white;

@@ -132,6 +132,7 @@ const changeComplete = (id) => {
 
 //Edit todo in list handler -----------------------------------------
 const editedHandler = (id) => {
+  mainSection.scrollTo(0,0);
   boxTask.classList.add("box-task2");
   const filterTodo = todos.find(todo => todo.id === id);
   tittleTodo.innerText="Edit Todo :";
@@ -147,7 +148,6 @@ const editedHandler = (id) => {
  editButton.style.display="block";
  cancelEdit.style.display="block";
  editButton.dataset.id=id;
-
  addTodo.style.display="none";
 }
 
@@ -259,7 +259,7 @@ const displayTodo = () => {
                  </div>
                  
                  <div class="control-box">
-                   <button href="#add-task-todo" class="edit-btn" onclick="editedHandler('${todo.id}')" >Edit</button>
+                   <button class="edit-btn" onclick="editedHandler('${todo.id}')" >Edit</button>
                    <button class="complete-btn" onclick="changeComplete('${todo.id}')">Complete</button>  
                    <button class="delete-todo-btn" onclick="deleteTodo('${todo.id}')">Delete</button>
                  </div>     
